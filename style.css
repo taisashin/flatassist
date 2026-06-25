@@ -1,0 +1,215 @@
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-bg {
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #0066cc;
+    margin: 10px auto 0;
+}
+
+/* ボタン共通 */
+.btn-main {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 36px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #004499;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a:not(.btn-nav):hover {
+    color: #0066cc;
+}
+
+.btn-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* メインビジュアル */
+.hero {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* サービス紹介 */
+.services-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.service-card {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-card h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #0066cc;
+}
+
+/* 会社概要 */
+.company-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.company-table th, .company-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.company-table th {
+    width: 30%;
+    font-weight: bold;
+}
+
+/* お問い合わせ */
+.contact-container {
+    text-align: center;
+}
+
+.contact-container p {
+    margin-bottom: 30px;
+}
+
+/* フッター */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* スマホ対応（レスポンシブ） */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    .hero-content h2 {
+        font-size: 30px;
+    }
+    .services-grid {
+        flex-direction: column;
+    }
+    .company-table th, .company-table td {
+        display: block;
+        width: 100%;
+    }
+    .company-table th {
+        border-bottom: none;
+        padding-bottom: 5px;
+        color: #0066cc;
+    }
+}
