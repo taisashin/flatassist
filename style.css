@@ -1,215 +1,1030 @@
-/* 基本設定 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===================================
+   合同会社フラットアシスト
+   style.css
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: #333;
-    line-height: 1.7;
-    background-color: #fff;
+html{
+    scroll-behavior:smooth;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body{
+    font-family:
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    color:#333;
+    background:#ffffff;
 }
 
-ul {
-    list-style: none;
+/* -----------------------------
+Container
+------------------------------*/
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
 }
 
-.container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* -----------------------------
+Header
+------------------------------*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 2px 10px rgba(0,0,0,.08);
+
+    z-index:999;
+
 }
 
-.section {
-    padding: 80px 0;
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
 }
 
-.section-bg {
-    background-color: #f8f9fa;
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#0F3D75;
+
 }
 
-.section-title {
-    text-align: center;
-    font-size: 28px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    position: relative;
+nav{
+
+    display:flex;
+
+    gap:35px;
+
 }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #0066cc;
-    margin: 10px auto 0;
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-/* ボタン共通 */
-.btn-main {
-    display: inline-block;
-    background-color: #0066cc;
-    color: #fff;
-    padding: 12px 36px;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+nav a:hover{
+
+    color:#1565C0;
+
 }
 
-.btn-main:hover {
-    background-color: #004499;
+/* -----------------------------
+Hero
+------------------------------*/
+
+.hero{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #0F3D75,
+    #1976D2);
+
+    color:#fff;
+
+    padding:
+
+    180px 20px
+
+    120px;
+
+    text-align:center;
+
 }
 
-/* ヘッダー */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.hero h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+    line-height:1.4;
+
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    color:#e8f0ff;
+
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
+/* -----------------------------
+Section
+------------------------------*/
+
+section{
+
+    padding:
+
+    100px
+
+    0;
+
 }
 
-nav ul {
-    display: flex;
-    align-items: center;
+section h2{
+
+    font-size:40px;
+
+    color:#0F3D75;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
 }
 
-nav ul li {
-    margin-left: 20px;
+/* -----------------------------
+Card
+------------------------------*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(
+    auto-fit,
+    minmax(300px,1fr));
+
+    gap:35px;
+
 }
 
-nav ul li a:not(.btn-nav):hover {
-    color: #0066cc;
+.card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:
+
+    0 8px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
 }
 
-.btn-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 14px;
+.card:hover{
+
+    transform:
+
+    translateY(-10px);
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.15);
+
 }
 
-/* メインビジュアル */
-.hero {
-    background-color: #0f172a;
-    color: #fff;
-    padding: 120px 0;
-    text-align: center;
+.card h3{
+
+    color:#1565C0;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
 }
 
-.hero-content h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.card p{
+
+    color:#555;
+
 }
 
-.hero-content p {
-    font-size: 18px;
-    color: #cbd5e1;
-    margin-bottom: 30px;
+/* -----------------------------
+Recommend
+------------------------------*/
+
+.recommend{
+
+    max-width:700px;
+
+    margin:auto;
+
+    list-style:none;
+
 }
 
-/* サービス紹介 */
-.services-grid {
-    display: flex;
-    gap: 20px;
+.recommend li{
+
+    background:#fff;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    border-left:
+
+    6px solid
+
+    #1976D2;
+
+    border-radius:12px;
+
+    box-shadow:
+
+    0 5px 18px rgba(0,0,0,.05);
+
 }
 
-.service-card {
-    flex: 1;
-    background-color: #fff;
-    border: 1px solid #e2e8f0;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
+/* -----------------------------
+Vision
+------------------------------*/
+
+.vision{
+
+    background:
+    linear-gradient(
+    135deg,
+    #0F3D75,
+    #1565C0);
+
+    color:#fff;
+
 }
 
-.service-card h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #0066cc;
+.vision h2{
+
+    color:#fff;
+
 }
 
-/* 会社概要 */
-.company-table {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    border-collapse: collapse;
+.vision p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:20px;
+
+    line-height:2;
+
 }
 
-.company-table th, .company-table td {
-    padding: 15px;
-    border-bottom: 1px solid #e2e8f0;
-    text-align: left;
+/* -----------------------------
+Company
+------------------------------*/
+
+#company{
+
+    background:#f7f9fc;
+
 }
 
-.company-table th {
-    width: 30%;
-    font-weight: bold;
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
 }
 
-/* お問い合わせ */
-.contact-container {
-    text-align: center;
+th{
+
+    width:220px;
+
+    background:#1565C0;
+
+    color:#fff;
+
+    text-align:left;
+
+    padding:22px;
+
+    font-size:18px;
+
 }
 
-.contact-container p {
-    margin-bottom: 30px;
+td{
+
+    padding:22px;
+
+    border-bottom:
+    1px solid #eee;
+
+    line-height:1.8;
+
+}
+
+tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/* -----------------------------
+Contact
+------------------------------*/
+
+#contact{
+
+    background:#ffffff;
+
+    text-align:center;
+
+}
+
+#contact p{
+
+    margin-bottom:20px;
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:
+
+    18px 45px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #1565C0,
+    #42A5F5);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 8px 25px rgba(21,101,192,.35);
+
+}
+
+.button:hover{
+
+    transform:
+
+    translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(21,101,192,.45);
+
+}
+
+/* -----------------------------
+Footer
+------------------------------*/
+
+footer{
+
+    background:#0B1F3A;
+
+    color:#ddd;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    font-size:15px;
+
+}
+
+footer a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* -----------------------------
+Utility
+------------------------------*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.pt-50{
+
+    padding-top:50px;
+
+}
+
+.pb-50{
+
+    padding-bottom:50px;
+
+}
+
+/* -----------------------------
+Responsive
+------------------------------*/
+
+@media (max-width:992px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+section h2{
+
+    font-size:34px;
+
+}
+
+nav{
+
+    gap:20px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+header .container{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero{
+
+    padding:150px 20px 90px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+table,
+tbody,
+tr,
+th,
+td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+th{
+
+    border-bottom:none;
+
+}
+
+td{
+
+    margin-bottom:20px;
+
+}
+
+.button{
+
+    width:100%;
+
+    max-width:340px;
+
+}
+
+}
+/* ===================================
+   Premium Design
+=================================== */
+
+/* セクションが少し浮き上がる */
+section{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* 見出しの下線 */
+
+section h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    background:#1976D2;
+
+    margin:18px auto 0;
+
+    border-radius:20px;
+
+}
+
+/* Hero */
+
+.hero{
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.18),
+    transparent 45%);
+
+}
+
+/* カード */
+
+.card{
+
+    border-top:5px solid transparent;
+
+}
+
+.card:hover{
+
+    border-top:5px solid #1976D2;
+
+}
+
+/* カードタイトル */
+
+.card h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ボタン */
+
+.button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.button:hover::before{
+
+    left:120%;
+
+}
+
+/* テーブル */
+
+table{
+
+    transition:.3s;
+
+}
+
+table:hover{
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.12);
+
+}
+
+/* リスト */
+
+.recommend li{
+
+    transition:.3s;
+
+}
+
+.recommend li:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* ナビ */
+
+nav a{
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#1565C0;
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* Footer */
+
+footer{
+
+    letter-spacing:.08em;
+
+}
+
+/* 画像を入れる時用 */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+/* フォーカス */
+
+a:focus{
+
+    outline:2px solid #1976D2;
+
+    outline-offset:4px;
+
+}
+
+/* スムーズ */
+
+html{
+
+    scroll-padding-top:90px;
+
+}
+/* ===================================
+   Final Polish
+=================================== */
+
+/* セクションの背景を交互に */
+section:nth-of-type(even):not(.hero):not(.vision){
+    background:#fafbfd;
+}
+
+/* 本文 */
+p{
+    line-height:1.9;
+}
+
+/* カード内の文章 */
+.card p{
+    font-size:16px;
+}
+
+/* カード高さを揃える */
+.card{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    min-height:260px;
+}
+
+/* お問い合わせボタン */
+.button{
+    font-size:18px;
+    letter-spacing:.05em;
+}
+
+.button:active{
+    transform:scale(.98);
+}
+
+/* テーブル */
+table{
+    border-radius:18px;
+}
+
+th{
+    vertical-align:top;
+}
+
+td{
+    background:#fff;
+}
+
+/* リスト */
+.recommend li::before{
+    content:"✓";
+    color:#1565C0;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* Hero */
+.hero h1{
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.25);
+}
+
+.hero p{
+    text-shadow:
+        0 1px 5px rgba(0,0,0,.15);
+}
+
+/* セクション余白 */
+section:last-of-type{
+    padding-bottom:120px;
 }
 
 /* フッター */
-footer {
-    background-color: #1e293b;
-    color: #94a3b8;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 14px;
+footer{
+    border-top:4px solid #1565C0;
 }
 
-/* スマホ対応（レスポンシブ） */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-    nav {
-        margin-top: 10px;
-    }
-    .hero-content h2 {
-        font-size: 30px;
-    }
-    .services-grid {
-        flex-direction: column;
-    }
-    .company-table th, .company-table td {
-        display: block;
-        width: 100%;
-    }
-    .company-table th {
-        border-bottom: none;
-        padding-bottom: 5px;
-        color: #0066cc;
-    }
+/* リンク */
+a{
+    transition:all .25s ease;
+}
+
+/* 選択色 */
+::selection{
+    background:#1976D2;
+    color:#fff;
+}
+
+/* スクロールバー（Chrome系） */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eef3f9;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1976D2;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#0F3D75;
+}
+
+/* 印刷時 */
+@media print{
+
+header,
+nav,
+.button,
+footer{
+    display:none;
+}
+
+body{
+    color:#000;
+    background:#fff;
+}
+
+section{
+    padding:30px 0;
+}
+
+}
+
+/* 大型ディスプレイ */
+@media (min-width:1400px){
+
+.container{
+    max-width:1280px;
+}
+
+.hero h1{
+    font-size:64px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+}
+
+/* 小型スマホ */
+@media (max-width:480px){
+
+.logo{
+    font-size:20px;
+}
+
+.hero{
+    padding:130px 20px 70px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+section{
+    padding:70px 0;
+}
+
+section h2{
+    font-size:28px;
+}
+
+.card{
+    padding:28px;
+}
+
+.button{
+    padding:16px 24px;
+    font-size:16px;
+}
+
 }
