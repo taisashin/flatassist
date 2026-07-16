@@ -1028,3 +1028,12 @@ section h2{
 }
 
 }
+
+.notice{
+    margin:30px auto 40px;
+    max-width:800px;
+    font-size:14px;
+    line-height:1.8;
+    color:#666;
+    text-align:left;
+}
